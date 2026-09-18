@@ -387,3 +387,18 @@ if (checkIn && checkOut) {
    END OF AMAK HOTEL JAVASCRIPT
 ===================================================== */
 ```
+/* CONTACT PHONE */
+
+.contact-phone {
+    margin-top: 10px;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.contact-phone a {
+    color: white;
+}
+
+.contact-phone a:hover {
+    text-decoration: underline;
+}
