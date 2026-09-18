@@ -1,28 +1,48 @@
 ```javascript
-/* =========================
+/* =====================================================
+   AMAK HOTEL - COMPLETE JAVASCRIPT
+===================================================== */
+
+
+/* =====================================================
+   HOTEL WHATSAPP NUMBER
+===================================================== */
+
+const hotelWhatsApp = "2348073721903";
+
+
+/* =====================================================
    MOBILE MENU
-========================= */
+===================================================== */
 
 const menuBtn = document.getElementById("menuBtn");
 const navMenu = document.getElementById("navMenu");
 
-menuBtn.addEventListener("click", () => {
-    navMenu.classList.toggle("show");
-});
+if (menuBtn && navMenu) {
+
+    menuBtn.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+    });
+
+}
 
 
 /* Close mobile menu after clicking a link */
 
 document.querySelectorAll("#navMenu a").forEach(link => {
+
     link.addEventListener("click", () => {
+
         navMenu.classList.remove("show");
+
     });
+
 });
 
 
-/* =========================
+/* =====================================================
    ROOM BUTTONS
-========================= */
+===================================================== */
 
 const roomButtons = document.querySelectorAll(".book-room");
 const roomSelect = document.getElementById("roomType");
@@ -45,9 +65,15 @@ roomButtons.forEach(button => {
             roomSelect.value = "75000";
         }
 
+
+        /* Scroll to booking form */
+
         document.getElementById("booking").scrollIntoView({
             behavior: "smooth"
         });
+
+
+        /* Calculate price */
 
         calculateBooking();
 
@@ -56,38 +82,59 @@ roomButtons.forEach(button => {
 });
 
 
-/* =========================
+/* =====================================================
    BOOKING CALCULATOR
-========================= */
+===================================================== */
 
 const checkIn = document.getElementById("checkIn");
 const checkOut = document.getElementById("checkOut");
 const roomType = document.getElementById("roomType");
 
-checkIn.addEventListener("change", calculateBooking);
-checkOut.addEventListener("change", calculateBooking);
-roomType.addEventListener("change", calculateBooking);
+
+if (checkIn && checkOut && roomType) {
+
+    checkIn.addEventListener("change", calculateBooking);
+
+    checkOut.addEventListener("change", calculateBooking);
+
+    roomType.addEventListener("change", calculateBooking);
+
+}
 
 
 function calculateBooking() {
 
     const price = Number(roomType.value);
 
+
+    /* If room or dates have not been selected */
+
     if (!price || !checkIn.value || !checkOut.value) {
+
         document.getElementById("bookingTotal").textContent = "₦0";
+
         document.getElementById("nightsText").textContent =
             "Select your room and dates";
+
         return;
+
     }
 
+
     const start = new Date(checkIn.value);
+
     const end = new Date(checkOut.value);
 
+
     const difference = end - start;
+
 
     const nights = Math.ceil(
         difference / (1000 * 60 * 60 * 24)
     );
+
+
+    /* Invalid dates */
 
     if (nights <= 0) {
 
@@ -97,51 +144,86 @@ function calculateBooking() {
             "Check-out must be after check-in";
 
         return;
+
     }
 
+
+    /* Calculate total */
+
     const total = price * nights;
+
 
     document.getElementById("bookingTotal").textContent =
         "₦" + total.toLocaleString("en-NG");
 
+
     document.getElementById("nightsText").textContent =
         nights + (nights === 1 ? " night" : " nights");
+
 }
 
 
-/* =========================
+/* =====================================================
    BOOKING FORM
-========================= */
+===================================================== */
 
 const bookingForm = document.getElementById("bookingForm");
 
-bookingForm.addEventListener("submit", function(event) {
 
-    event.preventDefault();
+if (bookingForm) {
 
-    const name = document.getElementById("guestName").value;
-    const phone = document.getElementById("phone").value;
-    const email = document.getElementById("email").value;
-    const room = document.getElementById("roomType");
+    bookingForm.addEventListener("submit", function(event) {
 
-    const roomName =
-        room.options[room.selectedIndex].text;
-
-    const checkInDate =
-        document.getElementById("checkIn").value;
-
-    const checkOutDate =
-        document.getElementById("checkOut").value;
-
-    const guests =
-        document.getElementById("guests").value;
-
-    const total =
-        document.getElementById("bookingTotal").textContent;
+        event.preventDefault();
 
 
-    const message =
-        `Hello AMAK HOTEL,
+        /* Get customer information */
+
+        const name =
+            document.getElementById("guestName").value.trim();
+
+        const phone =
+            document.getElementById("phone").value.trim();
+
+        const email =
+            document.getElementById("email").value.trim();
+
+
+        /* Get room */
+
+        const room =
+            document.getElementById("roomType");
+
+
+        const roomName =
+            room.options[room.selectedIndex].text;
+
+
+        /* Get dates */
+
+        const checkInDate =
+            document.getElementById("checkIn").value;
+
+        const checkOutDate =
+            document.getElementById("checkOut").value;
+
+
+        /* Get number of guests */
+
+        const guests =
+            document.getElementById("guests").value;
+
+
+        /* Get calculated total */
+
+        const total =
+            document.getElementById("bookingTotal").textContent;
+
+
+        /* Create WhatsApp message */
+
+        const message =
+`Hello AMAK HOTEL,
 
 I would like to make a booking.
 
@@ -158,56 +240,61 @@ Estimated Total: ${total}
 
 Please confirm availability and booking details.`;
 
-    /*
-       CHANGE THIS NUMBER LATER
-       TO AMAK HOTEL'S REAL WHATSAPP NUMBER.
 
-       Example:
-       Nigeria number 08012345678 becomes
-       2348012345678
-    */
+        /* Create WhatsApp link */
 
-    const hotelWhatsApp = "2348000000000";
-
-    const whatsappURL =
-        "https://wa.me/" +
-        hotelWhatsApp +
-        "?text=" +
-        encodeURIComponent(message);
-
-    window.open(whatsappURL, "_blank");
-
-});
+        const whatsappURL =
+            "https://wa.me/" +
+            hotelWhatsApp +
+            "?text=" +
+            encodeURIComponent(message);
 
 
-/* =========================
-   QUOTE FORM
-========================= */
+        /* Open WhatsApp */
+
+        window.open(whatsappURL, "_blank");
+
+    });
+
+}
+
+
+/* =====================================================
+   GET A QUOTE FORM
+===================================================== */
 
 const quoteForm = document.getElementById("quoteForm");
 
-quoteForm.addEventListener("submit", function(event) {
 
-    event.preventDefault();
+if (quoteForm) {
 
-    const name =
-        document.getElementById("quoteName").value;
+    quoteForm.addEventListener("submit", function(event) {
 
-    const phone =
-        document.getElementById("quotePhone").value;
-
-    const room =
-        document.getElementById("quoteRoom").value;
-
-    const guests =
-        document.getElementById("quoteGuests").value;
-
-    const request =
-        document.getElementById("quoteMessage").value;
+        event.preventDefault();
 
 
-    const message =
-        `Hello AMAK HOTEL,
+        /* Get quote information */
+
+        const name =
+            document.getElementById("quoteName").value.trim();
+
+        const phone =
+            document.getElementById("quotePhone").value.trim();
+
+        const room =
+            document.getElementById("quoteRoom").value;
+
+        const guests =
+            document.getElementById("quoteGuests").value;
+
+        const request =
+            document.getElementById("quoteMessage").value.trim();
+
+
+        /* Create WhatsApp message */
+
+        const message =
+`Hello AMAK HOTEL,
 
 I would like to request a quote.
 
@@ -221,44 +308,82 @@ ${request}
 
 Please send me a quotation.`;
 
-    /*
-       CHANGE THIS TO THE REAL
-       AMAK HOTEL WHATSAPP NUMBER.
-    */
 
-    const hotelWhatsApp = "2348000000000";
+        /* Create WhatsApp link */
 
-    const whatsappURL =
-        "https://wa.me/" +
-        hotelWhatsApp +
-        "?text=" +
-        encodeURIComponent(message);
-
-    window.open(whatsappURL, "_blank");
-
-});
+        const whatsappURL =
+            "https://wa.me/" +
+            hotelWhatsApp +
+            "?text=" +
+            encodeURIComponent(message);
 
 
-/* =========================
-   SET MINIMUM CHECK-IN DATE
-========================= */
+        /* Open WhatsApp */
 
-const today = new Date().toISOString().split("T")[0];
+        window.open(whatsappURL, "_blank");
 
-checkIn.min = today;
-checkOut.min = today;
+    });
+
+}
 
 
-/* Prevent checkout before check-in */
+/* =====================================================
+   DATE SETTINGS
+===================================================== */
 
-checkIn.addEventListener("change", () => {
+const today =
+    new Date().toISOString().split("T")[0];
 
-    checkOut.min = checkIn.value;
 
-    if (checkOut.value && checkOut.value <= checkIn.value) {
-        checkOut.value = "";
-    }
+if (checkIn && checkOut) {
 
-    calculateBooking();
-});
+    /* Customers cannot select a date in the past */
+
+    checkIn.min = today;
+
+    checkOut.min = today;
+
+
+    /* Checkout must be after check-in */
+
+    checkIn.addEventListener("change", () => {
+
+        checkOut.min = checkIn.value;
+
+
+        if (
+            checkOut.value &&
+            checkOut.value <= checkIn.value
+        ) {
+
+            checkOut.value = "";
+
+        }
+
+
+        calculateBooking();
+
+    });
+
+}
+
+
+/* =====================================================
+   PHONE NUMBER
+===================================================== */
+
+/*
+   AMAK HOTEL CONTACT:
+
+   +234 807 372 1903
+
+   WhatsApp:
+
+   https://wa.me/2348073721903
+*/
+
+
+/* =====================================================
+   END OF AMAK HOTEL JAVASCRIPT
+===================================================== */
 ```
