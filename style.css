@@ -1345,3 +1345,83 @@ footer {
     }
 
 }
+
+/* =========================
+   FLOATING WHATSAPP BUTTON
+========================= */
+
+.whatsapp-button {
+    position: fixed;
+
+    right: 22px;
+
+    bottom: 22px;
+
+    z-index: 2000;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    background: #25D366;
+
+    color: white;
+
+    padding: 13px 18px;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.25);
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.whatsapp-button span {
+    font-size: 22px;
+}
+
+
+.whatsapp-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+@media (max-width: 600px) {
+
+    .whatsapp-button {
+
+        right: 15px;
+
+        bottom: 15px;
+
+        padding: 12px;
+
+        border-radius: 50%;
+
+        width: 52px;
+
+        height: 52px;
+
+        justify-content: center;
+    }
+
+
+    .whatsapp-button strong {
+        display: none;
+    }
+
+
+    .whatsapp-button span {
+        font-size: 24px;
+    }
+
+}
