@@ -2,6 +2,11 @@
    AMAK HOTEL JAVASCRIPT
 ========================= */
 
+/* =========================
+   AMAK HOTEL WHATSAPP
+========================= */
+
+const hotelWhatsApp = "2348073721903";
 
 /* =========================
    ROOM PRICES
@@ -561,7 +566,7 @@ bookingForm.addEventListener(
 
         if (
             hotelWhatsApp !==
-            "234XXXXXXXXXX"
+            "2348073721903"
         ) {
 
             const whatsappURL =
