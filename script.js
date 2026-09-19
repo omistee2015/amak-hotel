@@ -364,7 +364,7 @@ quoteForm.addEventListener(
 
 
         const hotelWhatsApp =
-            "234XXXXXXXXXX";
+            "2348073721903";
 
 
         const whatsappMessage =
