@@ -1,441 +1,1059 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AMAK HOTEL - Comfortable rooms, swimming pool, lounge, restaurant and bar in Ejioku, Ibadan.">
-    <title>AMAK HOTEL | Ejioku, Ibadan</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="AMAK Hotel - Comfortable accommodation, swimming pool, lounge, restaurant and bar in Ejioku, Ibadan.">
+
+    <title>AMAK HOTEL | Ibadan</title>
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- ==================== NAVIGATION ==================== -->
-    <header class="header">
-        <div class="container nav">
-            <a href="#home" class="logo">
-                <span class="logo-icon">👑</span>
-                <div class="logo-text">
-                    <strong>AMAK HOTEL</strong>
-                    <small>IBADAN</small>
-                </div>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+    <div class="logo">
+        <div class="logo-symbol">A</div>
+
+        <div>
+            <h2>AMAK HOTEL</h2>
+            <span>IBADAN</span>
+        </div>
+    </div>
+
+
+    <button class="menu-button" id="menuButton">
+        ☰
+    </button>
+
+
+    <nav id="mainNav">
+
+        <a href="#home">HOME</a>
+
+        <a href="#rooms">ROOMS</a>
+
+        <a href="#amenities">AMENITIES</a>
+
+        <a href="#gallery">GALLERY</a>
+
+        <a href="#restaurant">RESTAURANT & BAR</a>
+
+        <a href="#quote">QUOTE</a>
+
+        <a href="#booking">BOOK NOW</a>
+
+        <a href="#contact">CONTACT</a>
+
+    </nav>
+
+
+    <a href="#booking"
+       class="header-button">
+
+        BOOK NOW
+
+    </a>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-slides">
+
+        <img src="amak1.png"
+             class="hero-image active"
+             alt="AMAK Hotel">
+
+        <img src="amak2.png"
+             class="hero-image"
+             alt="AMAK Hotel">
+
+        <img src="amak3.png"
+             class="hero-image"
+             alt="AMAK Hotel">
+
+        <img src="amak4.png"
+             class="hero-image"
+             alt="AMAK Hotel">
+
+    </div>
+
+
+    <div class="hero-overlay"></div>
+
+
+    <button class="slider-button previous"
+            id="previousSlide">
+        ❮
+    </button>
+
+
+    <button class="slider-button next"
+            id="nextSlide">
+        ❯
+    </button>
+
+
+    <div class="hero-content">
+
+        <p class="welcome">
+            WELCOME TO
+        </p>
+
+        <h1>
+            AMAK HOTEL
+        </h1>
+
+        <p class="address">
+            📍 16 Bethel Street, Ejioku, Ibadan
+        </p>
+
+        <p class="hero-description">
+            Comfort, relaxation and exceptional hospitality
+            all in one place.
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="#booking"
+               class="gold-button">
+
+                BOOK NOW
+
             </a>
 
-            <button class="menu-btn" id="menuBtn">☰</button>
 
-            <nav id="navMenu">
-                <a href="#home">HOME</a>
-                <a href="#rooms">ROOMS</a>
-                <a href="#amenities">AMENITIES</a>
-                <a href="#gallery">GALLERY</a>
-                <a href="#restaurant">RESTAURANT & BAR</a>
-                <a href="#quote">QUOTE</a>
-                <a href="#booking">BOOK NOW</a>
-                <a href="#contact">CONTACT</a>
-                <a href="#booking" class="btn-book-now">BOOK NOW</a>
-            </nav>
-        </div>
-    </header>
+            <a href="#quote"
+               class="outline-button">
 
+                GET A QUOTE
 
-    <!-- ==================== HERO SECTION ==================== -->
-    <section class="hero" id="home">
-        <div class="hero-overlay">
-            <div class="container hero-content">
-
-                <p class="welcome">Welcome to</p>
-                <h1>AMAK HOTEL</h1>
-
-                <p class="address">
-                    <i class="fas fa-map-marker-alt"></i>
-                    16 Bethel Street, Ejioku, Ibadan
-                </p>
-
-                <p class="hero-text">
-                    Luxury, Comfort and Exceptional Hospitality<br>
-                    All in One Place.
-                </p>
-
-                <div class="hero-buttons">
-                    <a href="#booking" class="btn primary">BOOK NOW</a>
-                    <a href="#quote" class="btn secondary">GET A QUOTE</a>
-                </div>
-
-            </div>
-
-            <!-- Slider dots -->
-            <div class="slider-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-
-            <!-- Slider arrows -->
-            <button class="slider-arrow prev">‹</button>
-            <button class="slider-arrow next">›</button>
-        </div>
-    </section>
-
-
-    <!-- ==================== OUR ROOMS ==================== -->
-    <section class="section rooms-section" id="rooms">
-        <div class="container">
-
-            <div class="section-heading center">
-                <h2>OUR ROOMS</h2>
-                <div class="heading-divider">✦</div>
-            </div>
-
-            <div class="room-grid">
-
-                <!-- SINGLE -->
-                <article class="room-card">
-                    <div class="room-image">
-                        <img src="amak1.png" alt="Single Room">
-                    </div>
-                    <div class="room-content">
-                        <h3>SINGLE ROOM</h3>
-                        <div class="room-price">₦25,000 <small>/ night</small></div>
-                        <div class="room-features">
-                            <span><i class="fas fa-user"></i> 1 Guest</span>
-                            <span><i class="fas fa-bed"></i> 1 Bed</span>
-                            <span><i class="fas fa-wifi"></i> Free Wi-Fi</span>
-                        </div>
-                        <button class="book-room btn-outline" data-room="Single Room">BOOK NOW</button>
-                    </div>
-                </article>
-
-                <!-- DOUBLE -->
-                <article class="room-card">
-                    <div class="room-image">
-                        <img src="amak2.png" alt="Double Room">
-                    </div>
-                    <div class="room-content">
-                        <h3>DOUBLE ROOM</h3>
-                        <div class="room-price">₦40,000 <small>/ night</small></div>
-                        <div class="room-features">
-                            <span><i class="fas fa-user"></i> 2 Guests</span>
-                            <span><i class="fas fa-bed"></i> 1 Bed</span>
-                            <span><i class="fas fa-wifi"></i> Free Wi-Fi</span>
-                        </div>
-                        <button class="book-room btn-outline" data-room="Double Room">BOOK NOW</button>
-                    </div>
-                </article>
-
-                <!-- SUITE -->
-                <article class="room-card">
-                    <div class="room-image">
-                        <img src="amak3.png" alt="Suite">
-                    </div>
-                    <div class="room-content">
-                        <h3>SUITE</h3>
-                        <div class="room-price">₦65,000 <small>/ night</small></div>
-                        <div class="room-features">
-                            <span><i class="fas fa-user"></i> 2 Guests</span>
-                            <span><i class="fas fa-bed"></i> 1 King Bed</span>
-                            <span><i class="fas fa-wifi"></i> Free Wi-Fi</span>
-                        </div>
-                        <button class="book-room btn-outline" data-room="Suite">BOOK NOW</button>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ==================== HOTEL AMENITIES ==================== -->
-    <section class="section amenities" id="amenities">
-        <div class="container">
-
-            <div class="section-heading center">
-                <h2>HOTEL AMENITIES</h2>
-                <div class="heading-divider">✦</div>
-            </div>
-
-            <div class="amenity-grid">
-
-                <div class="amenity-item">
-                    <div class="amenity-icon"><i class="fas fa-swimmer"></i></div>
-                    <p>Swimming Pool</p>
-                </div>
-
-                <div class="amenity-item">
-                    <div class="amenity-icon"><i class="fas fa-couch"></i></div>
-                    <p>Lounge</p>
-                </div>
-
-                <div class="amenity-item">
-                    <div class="amenity-icon"><i class="fas fa-utensils"></i></div>
-                    <p>Restaurant</p>
-                </div>
-
-                <div class="amenity-item">
-                    <div class="amenity-icon"><i class="fas fa-cocktail"></i></div>
-                    <p>Bar</p>
-                </div>
-
-                <div class="amenity-item">
-                    <div class="amenity-icon"><i class="fas fa-wifi"></i></div>
-                    <p>Free Wi-Fi</p>
-                </div>
-
-                <div class="amenity-item">
-                    <div class="amenity-icon"><i class="fas fa-shield-alt"></i></div>
-                    <p>24/7 Security</p>
-                </div>
-
-                <div class="amenity-item">
-                    <div class="amenity-icon"><i class="fas fa-parking"></i></div>
-                    <p>Parking Space</p>
-                </div>
-
-                <div class="amenity-item">
-                    <div class="amenity-icon"><i class="fas fa-tshirt"></i></div>
-                    <p>Laundry Service</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ==================== RESTAURANT & BAR ==================== -->
-    <section class="section restaurant" id="restaurant">
-        <div class="container restaurant-grid">
-
-            <div class="restaurant-text">
-                <h2>RESTAURANT & BAR</h2>
-                <p>
-                    Enjoy a variety of local and continental dishes and drinks
-                    in our elegant restaurant and well-stocked bar.
-                </p>
-                <a href="#booking" class="btn primary">VIEW MENU</a>
-            </div>
-
-            <div class="restaurant-image">
-                <img src="amak4.png" alt="Restaurant and Bar">
-            </div>
+            </a>
 
         </div>
-    </section>
+
+    </div>
 
 
-    <!-- ==================== GALLERY ==================== -->
-    <section class="section gallery-section" id="gallery">
-        <div class="container">
+    <div class="slider-dots">
 
-            <div class="section-heading center">
-                <h2>OUR GALLERY</h2>
-                <div class="heading-divider">✦</div>
-            </div>
+        <span class="dot active"></span>
 
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="amak5.png" alt="Hotel Exterior">
-                    <span>amak.png1</span>
+        <span class="dot"></span>
+
+        <span class="dot"></span>
+
+        <span class="dot"></span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ROOMS
+========================= -->
+
+<section class="section" id="rooms">
+
+    <div class="section-title">
+
+        <p>STAY WITH US</p>
+
+        <h2>OUR ROOMS</h2>
+
+        <div class="gold-line"></div>
+
+        <span>
+            Comfortable rooms designed for a relaxing stay.
+        </span>
+
+    </div>
+
+
+    <div class="room-container">
+
+
+        <!-- SINGLE -->
+
+        <div class="room-card">
+
+            <img src="amak5.png"
+                 alt="Single Room">
+
+            <div class="room-content">
+
+                <h3>
+                    SINGLE ROOM
+                </h3>
+
+                <div class="room-price">
+
+                    ₦25,000
+
+                    <small>
+                        / night
+                    </small>
+
                 </div>
-                <div class="gallery-item">
-                    <img src="amak2.png" alt="Guest Room">
-                    <span>amak.png2</span>
+
+
+                <div class="room-info">
+
+                    <span>
+                        👤 1 Guest
+                    </span>
+
+                    <span>
+                        🛏 1 Bed
+                    </span>
+
+                    <span>
+                        📶 Free Wi-Fi
+                    </span>
+
                 </div>
-                <div class="gallery-item">
-                    <img src="amak3.png" alt="Swimming Pool">
-                    <span>amak.png3</span>
-                </div>
-                <div class="gallery-item">
-                    <img src="amak4.png" alt="Lounge">
-                    <span>amak.png4</span>
-                </div>
-                <div class="gallery-item">
-                    <img src="amak5.png" alt="Bar">
-                    <span>amak.png5</span>
-                </div>
-            </div>
-
-        </div>
-    </section>
 
 
-    <!-- ==================== QUOTE + BOOKING FORMS ==================== -->
-    <section class="section forms-section">
-        <div class="container forms-grid">
+                <button class="room-button"
+                        data-room="Single Room">
 
-            <!-- GET A QUOTE -->
-            <div class="form-card" id="quote">
-                <h3>GET A QUOTE</h3>
-                <form id="quoteForm">
-                    <div class="form-group">
-                        <label>Full Name</label>
-                        <input type="text" id="quoteName" placeholder="Your full name" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Email Address</label>
-                        <input type="email" id="quoteEmail" placeholder="Your email">
-                    </div>
-                    <div class="form-group">
-                        <label>Check In</label>
-                        <input type="date" id="quoteCheckIn">
-                    </div>
-                    <div class="form-group">
-                        <label>Check Out</label>
-                        <input type="date" id="quoteCheckOut">
-                    </div>
-                    <div class="form-group">
-                        <label>Room Type</label>
-                        <select id="quoteRoom">
-                            <option value="">Select room</option>
-                            <option>Single Room</option>
-                            <option>Double Room</option>
-                            <option>Suite</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Message (Optional)</label>
-                        <textarea id="quoteMessage" rows="3" placeholder="Your message"></textarea>
-                    </div>
-                    <button type="submit" class="btn primary full-btn">GET QUOTE</button>
-                </form>
-            </div>
+                    BOOK NOW
 
-            <!-- BOOK YOUR STAY -->
-            <div class="form-card" id="booking">
-                <h3>BOOK YOUR STAY</h3>
-                <form id="bookingForm">
-                    <div class="form-group">
-                        <label>Full Name</label>
-                        <input type="text" id="guestName" placeholder="Your full name" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Email Address</label>
-                        <input type="email" id="email" placeholder="Your email">
-                    </div>
-                    <div class="form-group">
-                        <label>Phone Number</label>
-                        <input type="tel" id="phone" placeholder="Your phone number" required>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Check In</label>
-                            <input type="date" id="checkIn" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Check Out</label>
-                            <input type="date" id="checkOut" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Room Type</label>
-                            <select id="roomType" required>
-                                <option value="">Single Room</option>
-                                <option value="25000">Single Room — ₦25,000</option>
-                                <option value="40000">Double Room — ₦40,000</option>
-                                <option value="65000">Suite — ₦65,000</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Number of Guests</label>
-                            <input type="number" id="guests" min="1" value="1" required>
-                        </div>
-                    </div>
-                    <div class="estimate-box">
-                        <p>Estimated Stay</p>
-                        <h3 id="bookingTotal">₦0</h3>
-                        <span id="nightsText">Select your room and dates</span>
-                    </div>
-                    <button type="submit" class="btn primary full-btn">BOOK NOW</button>
-                </form>
-            </div>
+                </button>
 
-        </div>
-    </section>
-
-
-    <!-- ==================== TESTIMONIALS ==================== -->
-    <section class="section testimonials">
-        <div class="container">
-
-            <div class="section-heading center">
-                <h2>WHAT OUR GUESTS SAY</h2>
-                <div class="heading-divider">✦</div>
-            </div>
-
-            <div class="testimonial-box">
-                <div class="quote-mark">“</div>
-                <p>
-                    Amazing staff, beautiful environment, great food and excellent service.
-                    I will definitely come again!
-                </p>
-                <span>— Adesola T.</span>
-                <div class="quote-mark right">”</div>
-            </div>
-
-            <div class="testimonial-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- ==================== FOOTER ==================== -->
-    <footer id="contact">
-        <div class="container footer-grid">
-
-            <div class="footer-col">
-                <h3>AMAK HOTEL</h3>
-                <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> 16 Bethel Street, Ejioku, Ibadan, Oyo State.</li>
-                    <li><i class="fas fa-phone"></i> <a href="tel:+2348073721903">+234 807 372 1903</a></li>
-                    <li><i class="fas fa-envelope"></i> info@amakhotel.com</li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4>QUICK LINKS</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#rooms">Rooms</a></li>
-                    <li><a href="#amenities">Amenities</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4>&nbsp;</h4>
-                <ul>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#restaurant">Restaurant & Bar</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4>FOLLOW US</h4>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                </div>
             </div>
 
         </div>
 
-        <div class="footer-bottom">
-            <div class="container">
-                <p>© 2026 Amak Hotel. All Rights Reserved.</p>
-                <p>Designed with ❤️ for your comfort</p>
+
+
+        <!-- DOUBLE -->
+
+        <div class="room-card">
+
+            <img src="amak6.png"
+                 alt="Double Room">
+
+            <div class="room-content">
+
+                <h3>
+                    DOUBLE ROOM
+                </h3>
+
+                <div class="room-price">
+
+                    ₦40,000
+
+                    <small>
+                        / night
+                    </small>
+
+                </div>
+
+
+                <div class="room-info">
+
+                    <span>
+                        👥 2 Guests
+                    </span>
+
+                    <span>
+                        🛏 1 Bed
+                    </span>
+
+                    <span>
+                        📶 Free Wi-Fi
+                    </span>
+
+                </div>
+
+
+                <button class="room-button"
+                        data-room="Double Room">
+
+                    BOOK NOW
+
+                </button>
+
             </div>
+
         </div>
-    </footer>
 
 
-    <script src="script.js"></script>
+
+        <!-- SUITE -->
+
+        <div class="room-card">
+
+            <img src="amak7.png"
+                 alt="Hotel Suite">
+
+            <div class="room-content">
+
+                <h3>
+                    SUITE
+                </h3>
+
+                <div class="room-price">
+
+                    ₦65,000
+
+                    <small>
+                        / night
+                    </small>
+
+                </div>
+
+
+                <div class="room-info">
+
+                    <span>
+                        👥 2 Guests
+                    </span>
+
+                    <span>
+                        🛏 King Bed
+                    </span>
+
+                    <span>
+                        📶 Free Wi-Fi
+                    </span>
+
+                </div>
+
+
+                <button class="room-button"
+                        data-room="Suite">
+
+                    BOOK NOW
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     AMENITIES
+========================= -->
+
+<section class="amenities" id="amenities">
+
+    <div class="section-title">
+
+        <p>EVERYTHING YOU NEED</p>
+
+        <h2>HOTEL AMENITIES</h2>
+
+        <div class="gold-line"></div>
+
+    </div>
+
+
+    <div class="amenity-container">
+
+
+        <div class="amenity">
+
+            <div class="amenity-icon">
+                🏊
+            </div>
+
+            <h3>
+                Swimming Pool
+            </h3>
+
+            <p>
+                Relax and enjoy our swimming pool.
+            </p>
+
+        </div>
+
+
+
+        <div class="amenity">
+
+            <div class="amenity-icon">
+                🛋️
+            </div>
+
+            <h3>
+                Lounge
+            </h3>
+
+            <p>
+                A comfortable place to relax.
+            </p>
+
+        </div>
+
+
+
+        <div class="amenity">
+
+            <div class="amenity-icon">
+                🍽️
+            </div>
+
+            <h3>
+                Restaurant
+            </h3>
+
+            <p>
+                Enjoy delicious meals and dishes.
+            </p>
+
+        </div>
+
+
+
+        <div class="amenity">
+
+            <div class="amenity-icon">
+                🍸
+            </div>
+
+            <h3>
+                Bar
+            </h3>
+
+            <p>
+                Refreshments and drinks.
+            </p>
+
+        </div>
+
+
+
+        <div class="amenity">
+
+            <div class="amenity-icon">
+                📶
+            </div>
+
+            <h3>
+                Free Wi-Fi
+            </h3>
+
+            <p>
+                Stay connected during your visit.
+            </p>
+
+        </div>
+
+
+
+        <div class="amenity">
+
+            <div class="amenity-icon">
+                🛡️
+            </div>
+
+            <h3>
+                24/7 Security
+            </h3>
+
+            <p>
+                Your safety and comfort matter.
+            </p>
+
+        </div>
+
+
+
+        <div class="amenity">
+
+            <div class="amenity-icon">
+                🅿️
+            </div>
+
+            <h3>
+                Parking
+            </h3>
+
+            <p>
+                Convenient parking for guests.
+            </p>
+
+        </div>
+
+
+
+        <div class="amenity">
+
+            <div class="amenity-icon">
+                🧺
+            </div>
+
+            <h3>
+                Laundry
+            </h3>
+
+            <p>
+                Laundry service available.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section class="section" id="gallery">
+
+    <div class="section-title">
+
+        <p>EXPLORE AMAK</p>
+
+        <h2>OUR GALLERY</h2>
+
+        <div class="gold-line"></div>
+
+    </div>
+
+
+    <div class="gallery">
+
+        <img src="amak1.png"
+             alt="AMAK Hotel">
+
+        <img src="amak2.png"
+             alt="AMAK Hotel">
+
+        <img src="amak3.png"
+             alt="AMAK Hotel">
+
+        <img src="amak4.png"
+             alt="AMAK Hotel">
+
+        <img src="amak5.png"
+             alt="AMAK Hotel">
+
+        <img src="amak6.png"
+             alt="AMAK Hotel">
+
+        <img src="amak7.png"
+             alt="AMAK Hotel">
+
+        <img src="amak8.png"
+             alt="AMAK Hotel">
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     RESTAURANT
+========================= -->
+
+<section class="restaurant"
+         id="restaurant">
+
+    <img src="amak4.png"
+         alt="AMAK Hotel Restaurant">
+
+    <div class="restaurant-overlay"></div>
+
+
+    <div class="restaurant-content">
+
+        <p>
+            DINE & UNWIND
+        </p>
+
+        <h2>
+            RESTAURANT & BAR
+        </h2>
+
+        <span></span>
+
+        <p class="restaurant-text">
+
+            Enjoy a variety of local and continental
+            dishes, refreshing drinks and a relaxing
+            atmosphere at AMAK Hotel.
+
+        </p>
+
+
+        <a href="#quote"
+           class="gold-button">
+
+            ENQUIRE NOW
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     QUOTE + BOOKING
+========================= -->
+
+<section class="forms-section">
+
+
+    <!-- QUOTE -->
+
+    <div class="form-card"
+         id="quote">
+
+        <div class="form-title">
+
+            <p>
+                GET IN TOUCH
+            </p>
+
+            <h2>
+                GET A QUOTE
+            </h2>
+
+        </div>
+
+
+        <form id="quoteForm">
+
+            <input type="text"
+                   name="name"
+                   placeholder="Full Name"
+                   required>
+
+
+            <input type="email"
+                   name="email"
+                   placeholder="Email Address"
+                   required>
+
+
+            <input type="tel"
+                   name="phone"
+                   placeholder="Phone Number"
+                   required>
+
+
+            <div class="two-inputs">
+
+                <div>
+
+                    <label>
+                        Check In
+                    </label>
+
+                    <input type="date"
+                           name="checkin"
+                           required>
+
+                </div>
+
+
+                <div>
+
+                    <label>
+                        Check Out
+                    </label>
+
+                    <input type="date"
+                           name="checkout"
+                           required>
+
+                </div>
+
+            </div>
+
+
+            <select name="room"
+                    id="quoteRoom">
+
+                <option>
+                    Single Room
+                </option>
+
+                <option>
+                    Double Room
+                </option>
+
+                <option>
+                    Suite
+                </option>
+
+            </select>
+
+
+            <textarea name="message"
+                      placeholder="Message / Special Request">
+            </textarea>
+
+
+            <button type="submit"
+                    class="form-button">
+
+                GET QUOTE
+
+            </button>
+
+        </form>
+
+
+        <div id="quoteResult"
+             class="result">
+        </div>
+
+    </div>
+
+
+
+    <!-- BOOKING -->
+
+    <div class="form-card"
+         id="booking">
+
+        <div class="form-title">
+
+            <p>
+                RESERVE YOUR ROOM
+            </p>
+
+            <h2>
+                BOOK YOUR STAY
+            </h2>
+
+        </div>
+
+
+        <form id="bookingForm">
+
+            <input type="text"
+                   name="name"
+                   placeholder="Full Name"
+                   required>
+
+
+            <input type="tel"
+                   name="phone"
+                   placeholder="Phone Number"
+                   required>
+
+
+            <div class="two-inputs">
+
+                <div>
+
+                    <label>
+                        Check In
+                    </label>
+
+                    <input type="date"
+                           name="checkin"
+                           required>
+
+                </div>
+
+
+                <div>
+
+                    <label>
+                        Check Out
+                    </label>
+
+                    <input type="date"
+                           name="checkout"
+                           required>
+
+                </div>
+
+            </div>
+
+
+            <div class="two-inputs">
+
+                <select name="room">
+
+                    <option>
+                        Single Room
+                    </option>
+
+                    <option>
+                        Double Room
+                    </option>
+
+                    <option>
+                        Suite
+                    </option>
+
+                </select>
+
+
+                <input type="number"
+                       name="guests"
+                       min="1"
+                       value="1"
+                       placeholder="Number of Guests">
+
+            </div>
+
+
+            <textarea name="message"
+                      placeholder="Special Request">
+            </textarea>
+
+
+            <button type="submit"
+                    class="form-button">
+
+                REQUEST BOOKING
+
+            </button>
+
+        </form>
+
+
+        <div id="bookingResult"
+             class="result">
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     TESTIMONIAL
+========================= -->
+
+<section class="testimonial">
+
+    <div class="section-title">
+
+        <p>OUR GUESTS</p>
+
+        <h2>
+            WHAT OUR GUESTS SAY
+        </h2>
+
+        <div class="gold-line"></div>
+
+    </div>
+
+
+    <div class="testimonial-box">
+
+        <div class="quote-mark">
+            “
+        </div>
+
+        <p id="testimonialText">
+
+            Amazing staff, beautiful environment,
+            great food and excellent service.
+            I will definitely come again!
+
+        </p>
+
+        <strong id="testimonialName">
+
+            — AMAK Guest
+
+        </strong>
+
+        <div class="testimonial-dots">
+
+            <span class="testimonial-dot active"></span>
+
+            <span class="testimonial-dot"></span>
+
+            <span class="testimonial-dot"></span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer id="contact">
+
+    <div class="footer-container">
+
+
+        <div class="footer-column">
+
+            <div class="footer-logo">
+
+                <div class="logo-symbol">
+                    A
+                </div>
+
+                <div>
+
+                    <h2>
+                        AMAK HOTEL
+                    </h2>
+
+                    <span>
+                        IBADAN
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <p>
+                16 Bethel Street,
+                Ejioku, Ibadan,
+                Oyo State, Nigeria.
+            </p>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                QUICK LINKS
+            </h3>
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#rooms">
+                Rooms
+            </a>
+
+            <a href="#amenities">
+                Amenities
+            </a>
+
+            <a href="#gallery">
+                Gallery
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                HOTEL
+            </h3>
+
+            <a href="#restaurant">
+                Restaurant & Bar
+            </a>
+
+            <a href="#quote">
+                Get a Quote
+            </a>
+
+            <a href="#booking">
+                Book Now
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                CONTACT
+            </h3>
+
+            <p>
+                📞 +234 XXX XXX XXXX
+            </p>
+
+            <p>
+                📧 info@amakhotel.com
+            </p>
+
+            <p>
+                📍 Ejioku, Ibadan
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 AMAK Hotel.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script src="script.js"></script>
+
 </body>
+
 </html>
